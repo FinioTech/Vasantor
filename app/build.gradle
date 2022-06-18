@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+}
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.newroztech.vasantor"
+        minSdkVersion 21
+        targetSdkVersion 31
+
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        dataBinding = true
+        // viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "VASANTOR_STORE_ID", '"STORE_ID"'
+            buildConfigField "String", "VASANTOR_STORE_PASSWORD", '"STORE_PASSWORD"'
+            buildConfigField "Boolean", "VASANTOR_IS_PRODUCTION", 'true/false'
+        }
+        release {
+            buildConfigField "String", "VASANTOR_STORE_ID", '"STORE_ID"'
+            buildConfigField "String", "VASANTOR_STORE_PASSWORD", '"STORE_PASSWORD"'
+            buildConfigField "Boolean", "VASANTOR_IS_PRODUCTION", 'true/false'
+
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.0'
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.google.firebase:firebase-messaging:23.0.5'
+
+    // Vasantor
+    implementation 'com.finiotech:vasantor:1.0.1'
+}

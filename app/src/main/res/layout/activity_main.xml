@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/wellComeBackTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/welcome_back"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/wellComeBackAgainTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/welcome_back_again"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wellComeBackTextView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/keyOneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/key_1"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wellComeBackAgainTextView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/englishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="English"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/arabicBtn"
+            app:layout_constraintEnd_toStartOf="@+id/italicBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/italicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="Italic"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/englishBtn"
+            app:layout_constraintEnd_toStartOf="@+id/banglaBtn"
+            app:layout_constraintStart_toEndOf="@+id/englishBtn"
+            app:layout_constraintTop_toTopOf="@+id/englishBtn" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/banglaBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="Bangla"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/englishBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/italicBtn"
+            app:layout_constraintTop_toTopOf="@+id/englishBtn" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/arabicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="Arabic"
+            android:layout_marginBottom="60dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/kurdishBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/kurdishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="Kurdish"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/arabicBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/arabicBtn"
+            app:layout_constraintTop_toTopOf="@+id/arabicBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

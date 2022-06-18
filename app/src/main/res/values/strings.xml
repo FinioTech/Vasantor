@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vasantor</string>
+
+    <string name="welcome_back">welcome</string>
+    <string name="welcome_back_again">Welcome Back</string>
+    <string name="key_1">key One</string>
+
+</resources>
